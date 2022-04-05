@@ -1,0 +1,14 @@
+.header{
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#text-options{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
