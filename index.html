@@ -11,6 +11,10 @@
     <title>Team Page</title>
     <link rel="stylesheet" href="./index.css">
     <style>
+        body{
+            margin: 0px;
+        }
+
         #text-options {
             display: flex;
             flex-direction: column;
@@ -24,9 +28,10 @@
         #webpage-links {
             display: flex;
             flex-direction: row;
-            justify-content: center;
-            gap: 10px;
-            width: 100%;
+            justify-content: space-between;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
             font-family: 'Lato', sans-serif;
             font-weight: 400;
             padding-top: 5px;
@@ -39,7 +44,7 @@
             height: auto;
         }
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 1000px) {
             #text-options {
                 display: none;
             }
@@ -71,18 +76,18 @@
         }
 
         #contact, #explore, #quick-actions{
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+            min-height: 450px;
+            display: grid;
+            grid-template-rows: 15% 70%;
             margin-bottom: 30px;
             min-width: 100px;
         }
 
         #credits{
-            min-height: 380px;
+            min-height: 350px;
             display: grid;
             grid-template-rows: 50% 40%;
-            gap: 25px;
+            gap: 30px;
             margin-bottom: 30px;
         }
 
@@ -124,9 +129,10 @@
             justify-content: center;
             flex-grow: 1;
             height: 225px;
-            background-color: #0067B3CC;
+            /* background-color: #0067B3CC; */
             align-items: center;
             margin-bottom: 150px;
+            background: linear-gradient(to top, #0067B3CC 70%, white 30%);
         }
 
         .image-profile{
@@ -135,6 +141,12 @@
 
         .image-profile:hover{
             filter: grayscale(0%);
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     </style>
 </head>
@@ -355,22 +367,23 @@
 
     <div class="footer">
         <div id="contact">
-            <div>
-                Department of Chemical Engineering <br>IIT Roorkee
+            <div class="title">
+                Department of Chemical Engineering <br> IIT Roorkee
             </div>
+            <div class="content">
             <div>
-                <img src="./images/google-maps-chicago-100780535-large 1.png" width="250px" height="200px">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.9107664240646!2d77.89138041487837!3d29.86684718194732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb37ad2184d09%3A0xd5d942c6fd97cfb2!2sDept.%20of%20Chemical%20Engineering%2C%20IIT%20Roorkee!5e0!3m2!1sen!2sin!4v1649242853998!5m2!1sen!2sin" width="260" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div style="font-size: 14px;">
                 Contact us-
             </div>
-            <div style="display: flex; flex-direction: row; gap: 5px; font-size: 14px;">
+            <div style="display: flex; flex-direction: row; gap: 10px; font-size: 14px;">
             <img src="./images/Vector.svg">
             <span>
                 1234567223, 233233221
             </span>
             </div>
-            <div style="display: flex; flex-direction: row; gap: 5px; font-size: 14px;">
+            <div style="display: flex; flex-direction: row; gap: 10px; font-size: 14px;">
             <img src="./images/Vector (1).svg">
             <span>
                 iitrconnect@iitr.ac.in
@@ -383,11 +396,13 @@
             <img src="./images/Vector.png" style="border-radius: 50%;">
             <img src="./images/Vector.png" style="border-radius: 50%;">
             </div>
+            </div>
         </div>
         <div id="explore">
-            <div style="padding-bottom: 15px;">
+            <div class = "title">
                 Explore
             </div>
+            <div class="content">
             <span style="font-size: 14px;">
                 Department
             </span>
@@ -410,10 +425,12 @@
                 Department
             </span>
         </div>
+        </div>
         <div id="quick-actions">
-            <div style="padding-bottom: 15px;">
+            <div class = "title">
                 Quick Actions
             </div>
+            <div class="content">
             <span style="font-size: 14px;">
                 Apply Online
             </span>
@@ -435,6 +452,7 @@
             <span style="font-size: 14px;">
                 Give Feedback
             </span>
+            </div>
         </div>
         <div id="credits">
             <div style="width: 272px; background-color:#C4C4C4;">
@@ -443,7 +461,7 @@
                 <img src="./images/Vector 2.svg" style="float: left; padding-top: 2px; padding-right: 5px;">
                 <span style="font-size: 14px;">Department Brochure</span><br>
                 <span style="font-size: 14px;">Photo Credits: Photography Club, IITR</span>
-                <div style="margin-top: 11px;">
+                <div style="margin-top: 15px;">
                     <span style="font-size: 14px;">Made with ❤️ by :<br> Information Management Group, IITR</span>
                 </div>
             </div>
